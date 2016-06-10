@@ -68,6 +68,8 @@ public class Scope extends android.support.v4.app.Fragment {
                             Scopeinfo info = new Scopeinfo();
                             if (!jsonObject.isNull("name")) info.title = jsonObject.getString("name");
                             if(!jsonObject.isNull("vicinity")) info.subTitle = jsonObject.getString("vicinity");
+                            if (!jsonObject.isNull("mood")) info.mood = jsonObject.getString("mood");
+                            if (!jsonObject.isNull("local_phone_number")) info.phoneNumber = jsonObject.getString("local_phone_number");
                             info.iconId = icons[i%icons.length];
                             data.add(info);
                         }

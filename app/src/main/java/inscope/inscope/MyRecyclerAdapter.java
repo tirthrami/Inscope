@@ -28,8 +28,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
        final View view =  LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_scope_row, parent, false);
-        MyViewHolder holder = new MyViewHolder(view);
-        return holder;
+        return new MyViewHolder(view);
     }
 
     @Override
@@ -37,6 +36,8 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
         Scopeinfo current = data.get(position);
         holder.title.setText(current.title);
         holder.subtitle.setText(current.subTitle);
+        holder.mood.setText(current.mood);
+        holder.phoneNumber.setText(current.phoneNumber);
         holder.icon.setImageResource(current.iconId);
     }
 
@@ -56,6 +57,8 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
 
         public TextView title;
         public TextView subtitle;
+        public TextView mood;
+        public TextView phoneNumber;
         public ImageView icon;
         public LinearLayout row;
 
@@ -63,6 +66,8 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.scope_data_title);
             subtitle = (TextView) itemView.findViewById(R.id.scope_data_subtitle);
+            mood = (TextView) itemView.findViewById(R.id.mood);
+            phoneNumber = (TextView) itemView.findViewById(R.id.phoneNumber);
             icon = (ImageView) itemView.findViewById(R.id.scope_data_icon);
             row = (LinearLayout) itemView.findViewById(R.id.custom_row);
             row.setOnClickListener(this);
