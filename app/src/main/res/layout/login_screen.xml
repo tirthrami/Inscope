@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#bc0016">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearlayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:paddingTop="150dp"
+            android:paddingLeft="15dp">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="86dp"
+                android:id="@+id/imageView"
+                android:background="@drawable/logo"
+                android:layout_gravity="left|center_horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="vertical"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp">
+
+                <EditText
+                    android:id="@+id/emailfield"
+                    android:layout_width="fill_parent"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center_vertical"
+                    android:hint="Email"
+                    android:background="@drawable/textbar"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"></LinearLayout>
+
+                <EditText
+                    android:id="@+id/passwordfield"
+                    android:layout_width="fill_parent"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center_vertical"
+                    android:ems="10"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:background="@drawable/textbar"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <LinearLayout
+            android:id="@+id/linearlayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="226dp"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="116dp"
+                android:layout_height="37dp"
+                android:singleLine="false"
+                android:text="Login"
+                android:theme="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/login_button" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"></LinearLayout>
+
+            <Button
+                android:id="@+id/register"
+                android:layout_width="116dp"
+                android:layout_height="37dp"
+                android:text="Register"
+                android:theme="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/login_button" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
