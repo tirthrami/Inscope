@@ -6,93 +6,102 @@
     android:layout_height="match_parent"
     card_view:cardCornerRadius="2dp"
     android:layout_margin="5dp"
-    android:padding="10dp">
+    android:padding="0dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
 
-    <LinearLayout
-        android:id="@+id/custom_row"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/scope_data_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:padding="5dp"
-            android:src="@mipmap/ic_launcher" />
-
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:layout_gravity="center_vertical"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            android:padding="5dp"
-            android:id="@+id/scope_data_holder"
-            android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/scope_data_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Title"
-                android:textStyle="normal" />
+            android:paddingBottom="1dp"
+            android:background="#c1c1c1">
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:id="@+id/custom_row"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:background="#ffffff">
 
-                <TextView
-                    android:id="@+id/scope_data_subtitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:nestedScrollingEnabled="true"
-                    android:text="Subtitle"
-                    android:textIsSelectable="true"
-                    android:textSize="10dp"
-                    android:layout_weight="1" />
+                <ImageView
+                    android:id="@+id/scope_data_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:padding="5dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:id="@+id/scope_data_holder"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/scope_data_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Title"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/scope_data_subtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="true"
+                            android:text="Subtitle"
+                            android:textIsSelectable="true"
+                            android:textSize="10dp"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"></LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"></LinearLayout>
+                    android:id="@+id/scope_add_holder"
+                    android:layout_weight="3"
+                    android:gravity="right">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageButton"
+                        android:background="@android:drawable/ic_input_add"
+                        android:contentDescription="@android:drawable/ic_input_add"
+                        android:src="@android:drawable/ic_input_add"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
             </LinearLayout>
-
         </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/scope_add_holder"
-            android:layout_weight="3"
-            android:gravity="right">
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButton"
-                android:background="@android:drawable/ic_input_add"
-                android:contentDescription="@android:drawable/ic_input_add"
-                android:src="@android:drawable/ic_input_add"
-                android:layout_gravity="center" />
-        </LinearLayout>
-
-    </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:background="#e7e7e7">
+            android:background="#f2f2f2">
 
             <TextView
                 android:layout_width="match_parent"
@@ -113,5 +122,6 @@
                 android:gravity="right"
                 android:padding="5dp" />
         </LinearLayout>
+
     </LinearLayout>
 </android.support.v7.widget.CardView>
