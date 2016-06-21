@@ -29,6 +29,10 @@
         </activity>
 
         <service android:name="com.mapbox.mapboxsdk.telemetry.TelemetryService" />
+
+        <activity android:name=".SearchOverlay"
+            android:theme="@style/AppTheme.SearchOverlay">
+        </activity>
     </application>
 
 </manifest>

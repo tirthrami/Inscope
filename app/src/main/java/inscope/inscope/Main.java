@@ -1,5 +1,6 @@
 package inscope.inscope;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
@@ -16,6 +17,8 @@ import android.text.Spanned;
 import android.text.style.ImageSpan;
 import android.util.Log;
 import android.view.Display;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import tabs.SlidingTabLayout;
 
@@ -48,6 +51,23 @@ public class Main extends AppCompatActivity {
         mTabs.setCustomTabView(R.layout.custom_tab_view,R.id.tabText);
         mTabs.setViewPager(mPager);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu_main,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_search:
+                startActivity(new Intent(this,SearchOverlay.class));
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     class MyPagerAdapter extends FragmentPagerAdapter {
